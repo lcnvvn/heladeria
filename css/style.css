@@ -1,0 +1,283 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    font-size: 18px;
+}
+
+header, footer {
+    background-image: url("../img/fondo-header.png");
+    background-repeat: repeat;
+}
+
+.header-lista {
+    text-align: center;
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+    font-weight: 400;
+    font-size: 24px;
+    text-transform: uppercase;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.header-lista a {
+    text-decoration: none;
+    color: black;
+}
+
+.header-lista li {
+    flex: auto;
+    list-style-type: none;
+}
+
+.header-lista a:hover {
+    color: rgb(138, 60, 108);
+}
+
+.header-lista li:hover {
+    background-color: rgb(248, 242, 245);
+}
+
+.footer {
+    display: flex;
+    height: 140px;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid black;
+    padding: 10px;
+}
+
+
+.footer-texto {
+    display: flex;
+    width: 80%;
+    padding-left: 15px;
+    text-align: left;
+    background-color:rgba(255, 255, 255, 0.8);
+    font-size: 20px;
+}
+
+.footer-texto-mobile {
+    display: none;
+}
+
+.footer-nav li {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    list-style-type: none;
+    padding-right: 7px;
+}
+
+.grid-index {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-gap: 2rem;
+    grid-template-areas: "grid-main grid-main grid-main"
+                        "promo1 promo2 promo3";
+    height:fit-content;
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.grid-main {
+    grid-area: grid-main;
+    width: 60%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.promo1 {
+    grid-area: promo1;
+    background: rgb(255,240,244);
+    background: linear-gradient(142deg, rgba(255,240,244,0.5382353625043768) 0%, rgba(252,70,113,0.5858544101234244) 100%); 
+    border: 2px solid rgba(252,70,113,0.5858544101234244);
+    width: 300px;
+    height: 300px;
+    justify-self: end;
+    padding: 14px;
+}
+
+.promo2 {
+    grid-area: promo2;
+    background: rgb(255,240,244);
+    background: linear-gradient(142deg, rgba(255,240,244,0.5382353625043768) 0%, rgba(252,70,113,0.5858544101234244) 100%); 
+    border: 2px solid rgba(252,70,113,0.5858544101234244);
+    width: 300px;
+    height: 300px;
+    justify-self: center;
+    padding: 14px;
+}
+
+.promo3 {
+    grid-area: promo3;
+    background: rgb(255,240,244);
+    background: linear-gradient(142deg, rgba(255,240,244,0.5382353625043768) 0%, rgba(252,70,113,0.5858544101234244) 100%); 
+    border: 2px solid rgba(252,70,113,0.5858544101234244);
+    width: 300px;
+    height: 300px;
+    justify-self: start;
+    padding: 14px;
+}
+
+.promo1:hover, .promo2:hover, .promo3:hover {
+    transform: skewY(5deg);
+    transition-duration: 1s;
+}
+
+.main-texto {
+    text-align: center;
+}
+
+.promos {
+    font-size: 40px;
+    font-weight: 600;
+    color: rgb(90, 50, 74);
+}
+
+/* página Sucursales */
+
+.grid-sucursales {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px auto;
+    grid-gap: 2rem;
+    grid-template-areas: "titulo-sucursales titulo-sucursales"
+                        "contenedor-mapa info-mapa";
+    align-items: center;
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 20px; */
+}
+
+.titulo-sucursales {
+    grid-area: titulo-sucursales;
+    height: 100px;
+    justify-self: center;
+    padding-top: 20px;
+}
+
+.contenedor-mapa {
+    grid-area: contenedor-mapa;
+    justify-self: right;
+}
+
+.info-mapa {
+    grid-area: info-mapa;
+}
+
+@media screen and (max-width: 768px) {
+
+    .header-lista {
+        text-align: center;
+        display: block;
+        padding: 10px;
+    }
+    
+    .footer {
+        display:block;
+    }
+    
+    .footer-texto {
+        display: none;
+    }
+
+    .footer-texto-mobile {
+        display: block;
+        font-weight: 600;
+        font-size: 30px;
+        text-align: center;
+        background-color:rgba(255, 255, 255, 0.8);
+    }
+    
+    .footer-nav {
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .footer-nav li {
+        display: inline-block;
+    }
+    
+    .main-imagen {
+        width: 100%;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .main-texto {
+        display: none
+    }
+
+    .main-texto-mobile {
+        display: block;
+    }
+
+    .grid-index {
+        grid-template-columns: 1fr;
+        grid-template-areas: "grid-main"
+                            "promo1"
+                            "promo2"
+                            "promo3";
+        height: max-content;
+    }
+    
+    .promos {
+        font-size: 30px;
+    }
+
+    .promo1 {
+        justify-self: center;
+        height: 150px;
+    }
+    
+    .promo2 {
+        justify-self: center;
+        height: 150px;
+    }
+    
+    .promo3 {
+        justify-self: center;
+        height: 150px;
+    }
+
+    /* página Sucursales */
+
+    .grid-sucursales {
+        grid-template-columns: 1fr;
+        grid-template-areas: "titulo-sucursales"
+                            "contenedor-mapa"
+                            "info-mapa";
+    }
+
+    .titulo-sucursales {
+        height: 100px;
+        justify-self: center;
+        padding-top: 20px;
+    }
+
+    .contenedor-mapa {
+        justify-self: center;
+    }
+
+    .info-mapa {
+        justify-self: center;
+    }
+
+
+}

@@ -177,41 +177,6 @@ header, footer {
     padding-top: 20px;
 }
 
-
-/* página Sucursales */
-
-
-
-
-/* .grid-sucursales {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 100px auto;
-    grid-gap: 2rem;
-    grid-template-areas: "titulo-sucursales titulo-sucursales"
-                        "contenedor-mapa info-mapa";
-    align-items: center;
-    text-align: left;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-.titulo-sucursales {
-    grid-area: titulo-sucursales;
-    height: 100px;
-    justify-self: center;
-    padding-top: 20px;
-}
-
-.contenedor-mapa {
-    grid-area: contenedor-mapa;
-    justify-self: right;
-}
-
-.info-mapa {
-    grid-area: info-mapa;
-} */
-
 @media screen and (max-width: 1024px) {
 
     .navbar {
@@ -293,26 +258,4 @@ header, footer {
         height: 170px;
     }
 
-    /* página Sucursales */
-
-    .grid-sucursales {
-        grid-template-columns: 1fr;
-        grid-template-areas: "titulo-sucursales"
-                            "contenedor-mapa"
-                            "info-mapa";
-    }
-
-    .titulo-sucursales {
-        height: 100px;
-        justify-self: center;
-        padding-top: 20px;
-    }
-
-    .contenedor-mapa {
-        justify-self: center;
-    }
-
-    .info-mapa {
-        justify-self: center;
-    }
 }

@@ -14,24 +14,35 @@ header, footer {
     background-repeat: repeat;
 }
 
+main {
+    padding-top: 20px;
+}
+
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    color: rgb(211, 65, 102);
+}
+
 .navbar {
     display: none;
+    margin-bottom: 30px;
 }
 
 .header-lista {
     text-align: center;
     display: flex;
     font-family: 'Montserrat', sans-serif;
-    background-color: white;
-    font-weight: 400;
-    font-size: 24px;
+    background-color: rgb(255, 238, 238);
+    font-weight: 600;
+    font-size: 22px;
     text-transform: uppercase;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     padding: 10px;
-    padding-left: 50px;
-    padding-right: 50px;
-    margin-bottom: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .header-lista a {
@@ -45,11 +56,7 @@ header, footer {
 }
 
 .header-lista a:hover {
-    color: rgb(138, 60, 108);
-}
-
-.header-lista li:hover {
-    background-color: rgb(248, 242, 245);
+    color: rgb(211, 65, 102);
 }
 
 .footer {
@@ -82,115 +89,191 @@ header, footer {
     padding-right: 7px;
 }
 
-.grid-index {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto auto;
-    grid-gap: 2rem;
-    grid-template-areas: "grid-main grid-main grid-main"
-                        "promo1 promo2 promo3";
-    height:fit-content;
-    width: 100%;
-    justify-items: center;
-    align-items: center;
-    text-align: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-.grid-main {
-    grid-area: grid-main;
-    width: 60%;
-    padding-bottom: 20px;
-    padding-top: 20px;
-}
-
-.promo1 {
-    grid-area: promo1;
-    background: rgb(255,240,244);
-    background: linear-gradient(142deg, rgba(255,240,244,0.5382353625043768) 0%, rgba(252,70,113,0.5858544101234244) 100%); 
-    border: 2px solid rgba(252,70,113,0.5858544101234244);
-    width: 300px;
-    height: 300px;
-    justify-self: end;
-    padding: 14px;
-}
-
-.promo2 {
-    grid-area: promo2;
-    background: rgb(255,240,244);
-    background: linear-gradient(142deg, rgba(255,240,244,0.5382353625043768) 0%, rgba(252,70,113,0.5858544101234244) 100%); 
-    border: 2px solid rgba(252,70,113,0.5858544101234244);
-    width: 300px;
-    height: 300px;
-    justify-self: center;
-    padding: 14px;
-}
-
-.promo3 {
-    grid-area: promo3;
-    background: rgb(255,240,244);
-    background: linear-gradient(142deg, rgba(255,240,244,0.5382353625043768) 0%, rgba(252,70,113,0.5858544101234244) 100%); 
-    border: 2px solid rgba(252,70,113,0.5858544101234244);
-    width: 300px;
-    height: 300px;
-    justify-self: start;
-    padding: 14px;
-}
-
-.promo1:hover, .promo2:hover, .promo3:hover {
-    transform: skewY(5deg);
-    transition-duration: 1s;
-}
-
-.main-texto {
-    text-align: center;
-}
-
-.promos {
-    font-size: 40px;
-    font-weight: 600;
-    color: rgb(90, 50, 74);
-}
-
-.navbar {
-    margin-bottom: 30px;
-}
-
-.main-imagen {
-    padding: 20px;
-}
-
 .center {
     text-align: center;
 }
 
-/* página nosotros */
+/* index */
 
-.nosotros{
+.grid-index {
+    display: grid;
+    grid-template-columns: 25% 25% 25%;
+    grid-template-areas: "index-img index-img index-img"
+                         "index-texto index-texto index-texto"
+                         "promo1 promo2 promo3";
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    row-gap: 8%;
+    column-gap: 1%;
+    padding-bottom: 120px;
+    padding-top: 15px;
+}
+
+.index-img {
+    grid-area: index-img;
+}
+
+.index-texto {
+    grid-area: index-texto;
+    width: 70%;
+}
+
+.promo1 {
+    grid-area: promo1;
+    justify-self: right;
+}
+
+.promo2 {
+    grid-area: promo2;
+    justify-self: center;
+}
+
+.promo3 {
+    grid-area: promo3;
+    justify-self: left;
+}
+
+.promo1, .promo2, .promo3 {
+    background: rgb(255,240,244);
+    background: linear-gradient(142deg, rgba(255,240,244,0.5382353625043768) 0%, rgba(252,70,113,0.5858544101234244) 100%); 
+    border: 2px solid rgba(252,70,113,0.5858544101234244);
+    width: 270px;
+    height: 270px;
+    padding: 14px;
+}
+
+.promo1 p, .promo2 p, .promo3 p {
+    font-size: 36px;
+    font-weight: 600;
     text-align: center;
 }
 
-.main-texto-nosotros {
-    padding-right: 50px;
-    padding-left: 50px;
-    padding-top: 20px;
+
+/* página nosotros */
+
+.grid-nosotros {
+    display: grid;
+	grid-template-columns: 500px 500px;
+	/* grid-template-rows: 350px 350px 350px; */
+    grid-template-areas: "titulo-grid titulo-grid" 
+                        "img1 texto1"
+					    "texto2 img2"
+                        "img3 texto3";
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    gap: 4%;
+    padding-bottom: 120px;
 }
 
+.titulo-grid {
+    grid-area: titulo-grid;
+}
+
+.img1 {
+    grid-area: img1;
+}
+
+.img2 {
+    grid-area: img2;
+}
+
+.img3 {
+    grid-area: img3;
+}
+
+.texto1 {
+    grid-area: texto1;
+    text-align: left;
+}
+
+.texto2 {
+    grid-area: texto2;
+    text-align: right;
+}
+
+.texto3 {
+    grid-area: texto3;
+    text-align: left;
+}
+
+
+/* página sucursales */
+
+.grid-sucursales {
+    display: grid;
+	grid-template-columns: 500px 500px;
+    grid-template-areas: "titulo-grid titulo-grid" 
+                         "mapa1 direccion1"
+                         "mapa2 direccion2";
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1%;
+    row-gap: 8%;
+    padding-bottom: 120px;
+}
+
+.mapa1-mobile, .mapa2-mobile {
+    display: none;
+}
+
+.mapa1 {
+    grid-area: mapa1;
+    justify-self: auto;
+}
+
+.mapa2 {
+    grid-area: mapa2;
+}
+
+.direccion1 {
+    grid-area: direccion1;
+}
+
+.direccion2 {
+    grid-area: direccion2;
+}
+
+
+/* página sabores */
+
+.sabor {
+    color:rgb(211, 65, 102);
+    font-weight: 600;
+    text-align: right;
+}
+
+.titulo-sabor {
+    color: rgb(90, 50, 74);
+    font-weight: 600;
+    font-size: 24px;
+    text-align: left;
+    border-bottom: 1px solid rgb(90, 50, 74);
+    padding-top: 10px;
+}
+
+
 @media screen and (max-width: 1024px) {
+
+    
+    .header-nav {
+        display: none;
+    }
 
     .navbar {
         display: block;
     }
 
     .navbar-light {
-        background-color: white;
+        background-color: rgb(255, 238, 238);
         border-top: solid 1px black;
         border-bottom: solid 1px black;
     }
 
-    .header-nav {
-        display: none;
+   .active, .navbar-brand {
+        color: rgb(211, 65, 102) !important;
     }
 
     .header-lista {
@@ -224,38 +307,150 @@ header, footer {
         display: inline-block;
     }
     
-    .main-imagen {
-        width: 100%;
-    }
-
-    img {
-        width: 100%;
-    }
-
-    .main-texto {
-        display: none
-    }
-
-    .main-texto-mobile {
-        display: block;
-    }
+    
+    /* index */
 
     .grid-index {
         grid-template-columns: 1fr;
-        grid-template-areas: "grid-main"
-                            "promo1"
-                            "promo2"
-                            "promo3";
-        height: max-content;
+        grid-template-areas: "index-img"
+                             "index-texto"
+                             "promo1"
+                             "promo2"
+                             "promo3";
+        padding-bottom: 100px;
+        row-gap: 3%;
+        column-gap: 1%;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        padding-bottom: 120px;
+        padding-top: 5px;
+
     }
     
-    .promos {
-        font-size: 30px;
+    .index-img {
+        grid-area: index-img;
+        width: 80%;
+        max-width: 400px;
     }
-
-    .promo1, .promo2, .promo3 {
+    
+    .img-index {
+        width: 100%;
+    }
+    .index-texto {
+        grid-area: index-texto;
+        width: 90%;
+    }
+    
+    .promo1 {
+        grid-area: promo1;
         justify-self: center;
-        height: 170px;
+    }
+    
+    .promo2 {
+        grid-area: promo2;
+        justify-self: center;
+    }
+    
+    .promo3 {
+        grid-area: promo3;
+        justify-self: center;
+    }
+    
+    .promo1, .promo2, .promo3 {
+        background: rgb(255,240,244);
+        background: linear-gradient(142deg, rgba(255,240,244,0.5382353625043768) 0%, rgba(252,70,113,0.5858544101234244) 100%); 
+        border: 2px solid rgba(252,70,113,0.5858544101234244);
+        width: 300px;
+        height: 200px;
+        padding: 14px;
+    }
+    
+    .promo1 p, .promo2 p, .promo3 p {
+        font-size: 36px;
+        font-weight: 600;
+        text-align: center;
     }
 
+    /* página nosotros  */
+
+    .grid-nosotros {
+        display: grid;
+        grid-template-columns: 80%;
+        grid-template-areas: "titulo-grid"
+                             "img1"
+                             "texto1"
+                             "img2"
+                             "texto2"
+                             "img3"
+                             "texto3";
+        justify-items: center;
+        align-items: center;
+        gap: 2%;
+        padding: 10px;
+        padding-bottom: 200px;
+    }
+
+    .texto1, .texto2, .texto3 {
+        text-align: center;
+    }
+
+
+    /* página sucursales */
+
+    .grid-sucursales {
+	    grid-template-columns: 80%;
+        grid-template-areas: "titulo-grid" 
+                            "mapa1"
+                            "direccion1"
+                            "mapa2"
+                            "direccion2";
+        justify-items: center;
+        align-items: center;
+        justify-content: center;
+        column-gap: 1%;
+        row-gap: 6%;
+        padding-bottom: 200px;
+    }
+
+    /* página sabores */
+    
+    .sabor {
+        text-align: left;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    
+    /* index */
+
+    .promo1, .promo2, .promo3, {
+        width: 300px;
+    }
+    
+    /* página sucursales */
+
+    .grid-sucursales {
+	    grid-template-columns: 80%;
+        grid-template-areas: "titulo-grid" 
+                            "mapa1-mobile"
+                            "direccion1"
+                            "mapa2-mobile"
+                            "direccion2";
+        justify-items: center;
+        align-items: center;
+        justify-content: center;
+        column-gap: 1%;
+        row-gap: 6%;
+        padding-bottom: 220px;
+    }
+
+    .mapa1, .mapa2 {
+        display: none;
+    }
+
+    .mapa1-mobile, .mapa2-mobile {
+        display: block;
+    }
 }

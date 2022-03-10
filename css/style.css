@@ -238,6 +238,13 @@ header, footer {
     }
 }
 
+@media screen and (max-width: 1024px) {
+    /* PÁGINA SABORES */
+    .sabores__sabor {
+        text-align: left;
+    }
+}
+
 /* menor de 768 px */
 @media screen and (max-width: 768px)  {
 

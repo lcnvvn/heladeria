@@ -1,0 +1,46 @@
+@import './variables';
+@import './animaciones';
+@import './header';
+@import './index';
+@import './sabores';
+@import './nosotros';
+@import './sucursales';
+@import './contacto';
+@import './footer';
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    font-size: 18px;
+}
+
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    color: $mainColor;
+    margin-top: 36px;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.justify {
+    text-align: justify;
+}
+
+header, footer {
+    background-image: $headerImg;
+    background-repeat: repeat;
+}
+
+
+
+

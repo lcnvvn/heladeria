@@ -1,0 +1,29 @@
+@import './variables';
+
+/* INDEX */
+.index {
+    text-align: center;
+    margin-top: 40px;
+
+    &__promo_texto {
+        font-size: 34px;
+    }
+
+    &__card {
+        background: rgb(255,240,244);
+        background: $cardGradientColor;
+        border: 2px solid $cardBorderColor;
+        width: 250px;
+        height: 250px;
+        padding: 14px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .index__card {
+        width: 80%;
+        height: 100%;
+    }
+    
+}

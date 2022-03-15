@@ -1,0 +1,49 @@
+@import './variables';
+
+/* PÁGINA SUCURSALES */
+
+.sucursales {
+    &__mapa {
+        text-align: right;
+        margin-top: 40px;
+        margin-bottom: 30px;
+
+        &__mobile {
+            display: none;
+        }
+    }
+
+    &__direccion {
+        padding-top: 110px;
+        padding-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .sucursales {
+        &__mapa {
+            text-align: center;
+        }
+
+        &__direccion {
+            text-align: center;
+            padding-top: 10px;
+        }
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .sucursales__mapa {
+        &__mobile {
+            display: inline-block;
+        }
+
+        &__desktop {
+            display: none;
+        }
+    }
+
+}

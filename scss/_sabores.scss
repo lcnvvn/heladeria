@@ -1,0 +1,28 @@
+@import './variables';
+
+/* PÁGINA SABORES */
+
+.sabores {
+    &__titulo {
+        color: $subtitleColor;
+        font-weight: 600;
+        font-size: 24px;
+        text-align: left;
+        border-bottom: 1px solid $subtitleColor;
+        padding-top: 10px;
+    }
+
+    &__sabor {
+        color: $mainColor;
+        font-weight: 600;
+        text-align: right;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    .sabores__sabor {
+        text-align: left;
+    }
+
+}

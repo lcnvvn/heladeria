@@ -235,6 +235,9 @@
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif; }
 
+body {
+  overflow-x: hidden; }
+
 p {
   font-size: 18px; }
 

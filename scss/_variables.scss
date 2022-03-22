@@ -5,5 +5,13 @@ $subtitleColor: rgb(90, 50, 74);
 $cardGradientColor: linear-gradient(142deg, rgba(255,240,244,0.5382353625043768) 0%, rgba(252,70,113,0.5858544101234244) 100%); 
 $cardBorderColor: rgba(252,70,113,0.5858544101234244);
 
+// MIXIN
+@mixin important-text {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    color: $mainColor;
+}
+
 // IMAGES
 $headerImg: url("../img/fondo-header.png");

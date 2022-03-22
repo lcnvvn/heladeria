@@ -108,6 +108,18 @@
 .index {
   text-align: center;
   margin-top: 40px; }
+  .index__newsletter {
+    padding-top: 20px;
+    padding-bottom: 20px; }
+    .index__newsletter__texto, .index__newsletter__texto-correo {
+      text-transform: uppercase;
+      text-align: center;
+      font-weight: 600;
+      color: #d34166;
+      font-size: 26px; }
+      .index__newsletter__texto-correo {
+        font-size: 18px;
+        text-transform: none; }
   .index__promo_texto {
     font-size: 34px; }
   .index__card {
@@ -117,6 +129,9 @@
     width: 250px;
     height: 250px;
     padding: 14px; }
+  .index img {
+    max-width: 850px;
+    width: 100%; }
 
 @media screen and (max-width: 1024px) {
   .index__card {

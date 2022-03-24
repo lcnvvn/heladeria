@@ -152,7 +152,7 @@
   font-weight: 600;
   text-align: right; }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 991px) {
   .sabores__sabor {
     text-align: left; } }
 
@@ -164,7 +164,7 @@
   justify-items: center;
   align-items: center;
   justify-content: center;
-  gap: 2vw;
+  gap: 1vw;
   padding-bottom: 50px; }
   .nosotros p {
     text-align: justify; }
